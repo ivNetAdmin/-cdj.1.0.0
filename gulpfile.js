@@ -2,6 +2,12 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),    
     del = require('del'),
+    postcss = require("gulp-postcss"),
+    autoprefixer = require("autoprefixer"),
+    cssnano = require("cssnano"),
+    imagemin = require('gulp-imagemin'),
+    minify = require('gulp-minify'),
+    htmlmin = require('gulp-htmlmin'),
     browsersync = require('browser-sync').create();
 
 // paths
@@ -13,18 +19,32 @@ var paths = {
       dest: "./site/css"
    },
    jscript: {    
+      src: "./javascript/*",  
       dest: "./site/js"
    },
+   image: {      
+      dest: "./site/assets/images"
+   },
+   webfonts: {      
+      dest: "./site/webfonts"
+   },
    files: {
+      html: "./site/*.html",
+      pages: "./pages/*.html",
       sass: "./sass/*.scss",
-
+      images: "./images/*",
       bstraprbcss: "./node_modules/bootstrap/dist/css/bootstrap-reboot.min.css",
       bstrapcss: "./node_modules/bootstrap/dist/css/bootstrap.min.css",
       parallaxcss: "./node_modules/universal-parallax/dist/universal-parallax.min.css",
+      facss: "./node_modules/@fortawesome/fontawesome-free/css/all.css",
+      csslib: "./css-lib/*.css",
       
+      webfonts: "./node_modules/@fortawesome/fontawesome-free/webfonts/*",
+
       jquery: "./node_modules/jquery/dist/jquery.min.js",
       parallaxjs: "./node_modules/universal-parallax/dist/universal-parallax.min.js",
       bsstrapjs: "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+      fajs: "./node_modules/@fortawesome/fontawesome-free/js/all.min.js"
    }
 };
 
@@ -43,9 +63,23 @@ function browserSync() {
    done();
 }
 
-function clean() {
-   return del([paths.style.dest, paths.jscript.dest]);
+function clean() {gulp 
+   return del([paths.site.dest]);
  };
+
+ function librarycss(){
+   return (
+      gulp
+         .src([paths.files.bstraprbcss, paths.files.bstrapcss, paths.files.parallaxcss, paths.files.facss, paths.files.csslib])
+         .on("error",sass.logError)
+        // .pipe(sourcemaps.init())
+         .pipe(sass())
+         .pipe(postcss([autoprefixer(),cssnano()]))
+       //  .pipe(sourcemaps.write())
+         .pipe(gulp.dest(paths.style.dest))
+       //  .pipe(browsersync.stream())
+   );
+};
 
 function style(){
    return (gulp
@@ -53,32 +87,18 @@ function style(){
          .on("error",sass.logError)
        //  .pipe(sourcemaps.init())
          .pipe(sass())
-      //   .pipe(postcss([autoprefixer(),cssnano()]))
+         .pipe(postcss([autoprefixer(),cssnano()]))
       //   .pipe(sourcemaps.write())
          .pipe(gulp.dest(paths.style.dest))
+         .pipe(browsersync.stream())
    );
-         //.pipe(browsersync.stream()));
-};
-
-
-function librarycss(){
-   return (
-      gulp
-         .src([paths.files.bstraprbcss, paths.files.bstrapcss, paths.files.parallaxcss])
-         .on("error",sass.logError)
-        // .pipe(sourcemaps.init())
-         .pipe(sass())
-       //  .pipe(postcss([autoprefixer(),cssnano()]))
-       //  .pipe(sourcemaps.write())
-         .pipe(gulp.dest(paths.style.dest))
-       //  .pipe(browsersync.stream())
-   );
+         
 };
 
 function libraryjs(){
    return (
       gulp
-         .src([paths.files.jquery, paths.files.bsstrapjs, paths.files.parallaxjs])
+         .src([paths.files.jquery, paths.files.bsstrapjs, paths.files.parallaxjs, paths.files.fajs])
          //.pipe(sourcemaps.init())
          //.pipe(sourcemaps.write())
          .pipe(gulp.dest(paths.jscript.dest))
@@ -86,22 +106,74 @@ function libraryjs(){
    );
 };
 
+function javascript(){
+   return (
+      gulp
+         .src([paths.jscript.src])
+        // .pipe(sourcemaps.init())
+         .pipe(minify())
+        // .pipe(sourcemaps.write())
+         .pipe(gulp.dest(paths.jscript.dest))
+         .pipe(browsersync.stream())
+   );
+};
+
+function image(){
+   return (
+      gulp
+         .src(paths.files.images)
+         .pipe(imagemin())
+         .pipe(gulp.dest(paths.image.dest))
+         .pipe(browsersync.stream())
+   );
+};
+
+function webfonts(){
+   return (
+      gulp
+         .src(paths.files.webfonts) 
+         .pipe(gulp.dest(paths.webfonts.dest))
+         .pipe(browsersync.stream())
+   );
+};
+
+function html(){
+   return (
+      gulp
+         .src(paths.files.pages)
+         .pipe(htmlmin({ collapseWhitespace: true }))
+         .pipe(gulp.dest(paths.site.dest))
+         .pipe(browsersync.stream())
+   );
+};
+
 // watch files
 function watchfiles(){
-   //gulp.watch(paths.files.pages, gulp.series(html, browserReload));    
+   gulp.watch(paths.files.pages, gulp.series(html, browserReload));    
    gulp.watch(paths.files.sass, gulp.series(style, browserReload));        
-   //gulp.watch(paths.jscript.src, gulp.series(javascript, browserReload));
+   gulp.watch(paths.jscript.src, gulp.series(javascript, browserReload));
 };
 
 // complex tasks
-const libraries = gulp.series(clean, gulp.parallel(librarycss, libraryjs));
+const libraries = gulp.parallel(librarycss, libraryjs, webfonts);
+const build = gulp.series(clean, gulp.parallel(libraries, style, javascript, image, html));
 const watch = gulp.parallel(browserSync, watchfiles);
 
 // export
 exports.clean = clean;
-exports.style = style;
+
 exports.librarycss = librarycss;
 exports.libraryjs = libraryjs;
+exports.webfonts = webfonts;
+
+exports.libraries = libraries;
+
+exports.style = style;
+exports.javascript = javascript;
+exports.image = image;
+exports.html = html;
+
+exports.build = build;
 exports.watch = watch;
 
 exports.default = watch;

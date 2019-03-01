@@ -3,3 +3,45 @@
 body{
    background-color: $default-bg-colour;
  }
+
+ .fg-slider {
+  height: 800px!important;
+}
+
+.container--big {
+  height: 175vh;
+}
+
+.container--full {
+  height: 100vh;
+}
+
+.container--small {
+  height: 40vh;
+}
+
+.container {
+  -webkit-align-items: center;
+  align-items: center;
+  // display: -webkit-flex;
+  // display: -ms-flexbox;
+  // display: flex;
+  -ms-flex-align: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+.container .content {
+  background: rgba(0,0,0,.75);
+  border-radius: 8px;
+  color: #fff;
+  margin: 0 auto;
+  padding: 30px 35px;
+  text-align: center;
+}

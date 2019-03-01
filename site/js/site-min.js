@@ -1,0 +1,1 @@
+$(function(){(new universalParallax).init({speed:8}),new FgSlider("slider-1",{autoplay:!0,effect:"slide",duration:5e3,bullets:!0})});

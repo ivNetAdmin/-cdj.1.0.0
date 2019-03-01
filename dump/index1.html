@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/slider.css">
+    <title>FG-Slider</title>
+    <style>
+        .fg-slider {
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <!-- SLIDER -->
+    <div class="fg-slider" id="slider-1">
+        <div class="fg-content text-center">
+            <p>Hi There... I'm Sarah Smith</p>
+            <a href="#about-me" class="btn hover">
+                <i class="fa fa-angle-right" aria-hidden="true"></i> More about me...</a>
+        </div>
+        <img src="images/slide-1.jpg" alt="">
+
+        <div class="fg-content text-center">
+            <p>Hi There... I'm Sarah Smith</p>
+            <a href="#about-me" class="btn hover">
+                <i class="fa fa-angle-right" aria-hidden="true"></i> More about me...</a>
+        </div>
+        <img src="images/slide-2.jpg" alt="">
+    </div>
+
+    <script src="js/slider.js"></script>
+    <script>
+        new FgSlider('slider-1', {
+            autoplay: true, // autoplay on / off
+            effect: 'slide', // fade, scale, slide, slide-top
+            duration: 5000, // duration till the next slide
+            bullets: true, // show / hide bullets
+        });
+    </script>
+</body>
+</html>
