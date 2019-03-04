@@ -25,7 +25,10 @@ var paths = {
    image: {      
       dest: "./site/assets/images"
    },
-   webfonts: {      
+   video: {      
+      dest: "./site/assets/videos"
+   },
+   webfont: {      
       dest: "./site/webfonts"
    },
    files: {
@@ -33,6 +36,7 @@ var paths = {
       pages: "./pages/*.html",
       sass: "./sass/*.scss",
       images: "./images/*",
+      videos: "./videos/*",
       bstraprbcss: "./node_modules/bootstrap/dist/css/bootstrap-reboot.min.css",
       bstrapcss: "./node_modules/bootstrap/dist/css/bootstrap.min.css",
       parallaxcss: "./node_modules/universal-parallax/dist/universal-parallax.min.css",
@@ -128,11 +132,19 @@ function image(){
    );
 };
 
+function video(){
+   return (
+      gulp
+         .src(paths.files.videos)     
+         .pipe(gulp.dest(paths.video.dest))
+         .pipe(browsersync.stream())
+   );
+};
 function webfonts(){
    return (
       gulp
          .src(paths.files.webfonts) 
-         .pipe(gulp.dest(paths.webfonts.dest))
+         .pipe(gulp.dest(paths.webfont.dest))
          .pipe(browsersync.stream())
    );
 };
@@ -156,7 +168,7 @@ function watchfiles(){
 
 // complex tasks
 const libraries = gulp.parallel(librarycss, libraryjs, webfonts);
-const build = gulp.series(clean, gulp.parallel(libraries, style, javascript, image, html));
+const build = gulp.series(clean, gulp.parallel(libraries, style, javascript, image, video, html));
 const watch = gulp.parallel(browserSync, watchfiles);
 
 // export
@@ -171,6 +183,7 @@ exports.libraries = libraries;
 exports.style = style;
 exports.javascript = javascript;
 exports.image = image;
+exports.video = video;
 exports.html = html;
 
 exports.build = build;

@@ -1,0 +1,83 @@
+#overlay {
+   background-color: rgba(0, 0, 0, 0.05);
+   height: 100%;
+   left: 0;
+   position: relative;
+   top: 0;
+   transition: background-color 300ms ease;
+   width: 100%; 
+}
+
+#hero-vid {
+   backface-visibility: hidden;
+   background-size: cover;
+   bottom: 0;
+   height: auto;
+   min-height: 100%;
+   min-width: 100%;
+   perspective: 1000;
+   position: fixed;
+   right: 0;
+   width: auto;
+   z-index: -1; }
+ 
+ .splash {
+   position: absolute;
+   color: #fff;
+   font-size: 850%;
+   top: 28%;
+   width: 100%;
+   letter-spacing: -0.05em;
+   text-shadow: 0 0 20px #c0c0c0;
+   font-weight: 300;
+   line-height: 100%;
+   margin-right: auto;
+   margin-left: auto; }
+ 
+ .strapline {
+   opacity: 0;
+   animation-name: fade;
+   animation-duration: 9s;
+   animation-iteration-count: infinite;
+   position: absolute;
+   left: 0;
+   right: 0;
+   text-align: center; }
+ 
+ .splash p:nth-child(1) {
+   animation-delay: 0s; }
+ 
+ .splash p:nth-child(2) {
+   animation-delay: 3s; }
+ 
+ .splash p:nth-child(3) {
+   animation-delay: 6s; }
+ 
+ .splash span {
+   color: #fccb07 !important; }
+ 
+ .tagline {
+   color: #fff;
+   font-size: 12%;
+   text-align: center;
+   width: 100%;
+   letter-spacing: 0.05em;
+   line-height: 100%; }
+ 
+ .hide {
+   display: none !important; }
+ 
+ @keyframes fade {
+   0% {
+     opacity: 0; }
+   11.11% {
+     opacity: 1; }
+   33.33% {
+     opacity: 1; }
+   44.44% {
+     opacity: 0; }
+   100% {
+     opacity: 0; } }
+ 
+ 
+

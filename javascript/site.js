@@ -8,5 +8,5 @@ $(function() {
     effect: 'slide', // fade, scale, slide, slide-top
     duration: 5000, // duration till the next slide
     bullets: true, // show / hide bullets
-});
+  });
 }); 

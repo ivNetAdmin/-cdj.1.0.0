@@ -45,3 +45,23 @@ body{
   padding: 30px 35px;
   text-align: center;
 }
+
+.about-us-section
+{
+  background-color: #fff;
+}
+.about-us-text
+{
+  text-align: left;
+}
+
+figure{
+background: #ffbf00;
+height: 64px;
+width: 64px;
+display: flex;
+align-items: center;
+border-radius: 50%;
+justify-content: center;
+float: left;
+}

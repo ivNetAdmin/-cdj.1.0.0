@@ -1,0 +1,1 @@
+$(function(){$(window).on("load scroll",function(){var o=$(this).scrollTop();$("#hero-vid").css("transform","translate3d(0, "+-.25*o+"px, 0)"),setTimeout(function(){$(".splash").removeClass("hide"),$(".btn-holder").removeClass("hide")},2500)})});
