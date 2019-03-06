@@ -1,4 +1,11 @@
-.hide-on-mobile
+@import "video";
+
+.hide-on-desktop
 {
    display:none;
 }
+
+.btn-holder {
+   top: 75%;
+   width: 100%;
+ }
