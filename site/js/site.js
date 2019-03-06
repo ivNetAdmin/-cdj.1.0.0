@@ -9,4 +9,21 @@ $(function() {
     duration: 5000, // duration till the next slide
     bullets: true, // show / hide bullets
   });
+
+  $('#hero-vid').on('loadeddata',function(e)
+  {
+    setTimeout(function(){
+      $('.loader').fadeOut('slow');
+    },2000);
+  });
 }); 
+
+
+// $('#hero-vid').on('loadeddata',function(e)
+//         {
+//             setTimeout(function(){
+//                 $('.loader').fadeOut('slow');
+//                 $('#hero-vid').fadeIn('slow'); 
+//                 },2000);
+//                 $('.splash').removeClass('hide');
+//         });
