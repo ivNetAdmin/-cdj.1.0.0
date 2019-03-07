@@ -28,7 +28,7 @@ body{
 }
 
 .container--about-us {
-  height: 56vh;
+  height: 68vh;
 }
 
 .container {
@@ -42,9 +42,9 @@ body{
 }
 
 .container .content {
-  background: rgba(0,0,0,.75);
-  border-radius: 8px;
-  color: #fff;
+  //background: rgba(0,0,0,.75);
+  //border-radius: 8px;
+ // color: #fff;
   margin: 0 auto;
   padding: 30px 35px;
   text-align: center;
@@ -93,7 +93,7 @@ float: left;
 }
 
 .about-us-section .content{
-  // background-color: #fff!important;
+   background-color: #fff;
   color: #151515;
 }
 
@@ -131,8 +131,16 @@ float: left;
     margin-top: -4.5px;
 }
 
-#bg2
+
+.bg2
 {
+  background-color: #fff;
+ // background-image: url('../assets/images/bg-2.png')
+}
+
+.bg3
+{
+ // background-color: #fff;
   background-image: url('../assets/images/bg-2.png')
 }
 
