@@ -16,14 +16,18 @@ $(function() {
       $('.loader').fadeOut('slow');
     },2000);
   });
+
+ 
 }); 
 
+window.onscroll = function (e) {  
+  if( $(window).scrollTop()> 500)
+  {
+    $('.navbar').removeClass('bg-trans');    
+    $('.navbar').addClass('bg-no-trans');
+  }else{
+    $('.navbar').removeClass('bg-no-trans');    
+    $('.navbar').addClass('bg-trans');
+  }
+}
 
-// $('#hero-vid').on('loadeddata',function(e)
-//         {
-//             setTimeout(function(){
-//                 $('.loader').fadeOut('slow');
-//                 $('#hero-vid').fadeIn('slow'); 
-//                 },2000);
-//                 $('.splash').removeClass('hide');
-//         });
