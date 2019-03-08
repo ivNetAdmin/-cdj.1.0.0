@@ -4,6 +4,10 @@ body{
    background-color: $default-bg-colour;
  }
 
+ a{
+  text-decoration: none!important;
+ }
+
  .bg-trans {
   background-color: rgba(0, 0, 0, 0.2); }
 
@@ -28,11 +32,11 @@ body{
 }
 
 .container--about-us {
-  height: 68vh;
+  height: 58vh;
 }
 
 .container--our-team {
-  height: 80vh;
+  height: 96vh;
 }
 
 .container {
@@ -58,6 +62,12 @@ body{
 {
   margin-top: 50px;
   text-align: left;
+}
+
+.bold-strapline
+{
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 figure{
@@ -101,6 +111,15 @@ float: left;
   color: #151515;
 }
 
+.services-section .content{
+  background-color: #fff;
+ color: #151515;
+}
+
+.our-team-section h2{
+  color: #fff;
+}
+
 .divider-1 span
 {
   display: inline-block;
@@ -135,23 +154,164 @@ float: left;
     margin-top: -4.5px;
 }
 
-
 .bg2
 {
   background-color: #fff;
-  //background-image: url('../assets/images/bg-2.png')
+  background-image: url('../assets/images/bg-2.jpg')
 }
 
 .bg3
 {
- // background-color: #fff;
-  background-image: url('../assets/images/bg-2.png')
+  background-color: #fff;
+  background-image: url('../assets/images/bg-3.jpg')
 }
 
-// .about-us-section
-// {
-//   background-image: url('http://localhost:3000/assets/images/bg-2.png');
-//   background-position: 50%;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-// }
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #cfa616;
+  border-color: #cfa616;
+  box-shadow: none;
+  outline: none;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #cfa616;
+  border-color: #cfa616;
+}
+
+#team .card {
+  border: none;
+  background: #ffffff;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  border-radius: .25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.mainflip {
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  -ms-transition: 1s;
+  -moz-transition: 1s;
+  -moz-transform: perspective(1000px);
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.frontside {
+  position: relative;
+  -webkit-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+.backside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+  -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+  box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transition: 1s;
+  -moz-transform-style: preserve-3d;
+  -o-transition: 1s;
+  -o-transform-style: preserve-3d;
+  -ms-transition: 1s;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+  min-height: 312px;
+}
+
+.backside .card a {
+  font-size: 18px;
+  color: $shadow-color !important;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+  color: $shadow-color !important;
+}
+
+.ut-portfolio-menu-wrap {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ut-portfolio-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: block;
+}
+
+.ut-portfolio-menu li {
+  margin: 0 20px 20px 0;
+  display: inline-block;
+  list-style: none;
+  position: relative;
+}
+
+.ut-portfolio-101 .ut-portfolio-menu li a {
+  letter-spacing: 0em !important;
+  text-transform: uppercase !important;
+  font-weight: normal !important; 
+}
+.ut-portfolio-menu li a.selected, .ut-portfolio-menu li a.selected:hover {
+  color: #fff;
+  background: #151515;
+  border-color: #151515;  
+}
+.ut-portfolio-menu li a {
+  font-size: 12px;
+  background: 0 0;
+  padding: 10px;
+  line-height: 100%;
+  color: #777;
+  display: inline-block;
+  border: 1px solid #777;
+  -webkit-transition: all .4s cubic-bezier(.215,.61,.355,1);
+  -o-transition: all .4s cubic-bezier(.215,.61,.355,1);
+  transition: all .4s cubic-bezier(.215,.61,.355,1);
+}

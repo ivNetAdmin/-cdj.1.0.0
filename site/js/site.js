@@ -29,5 +29,12 @@ window.onscroll = function (e) {
     $('.navbar').removeClass('bg-no-trans');    
     $('.navbar').addClass('bg-trans');
   }
+
+  if( $(window).scrollTop()> 680)
+  {
+    $('.video-section').hide();
+  }else{
+    $('.video-section').show();
+  }
 }
 
