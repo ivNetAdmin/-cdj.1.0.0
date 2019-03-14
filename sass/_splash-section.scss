@@ -1,0 +1,14 @@
+.container--splash
+{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.content--splash p
+{
+    color: $alt-font-color;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 45px !important;
+    padding: 80px 0;
+}

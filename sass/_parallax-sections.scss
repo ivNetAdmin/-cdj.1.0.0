@@ -1,0 +1,49 @@
+.parallax__container .parallax {
+	/* can be put in a seperate class for better control */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* --------------------------- */
+	position: fixed;
+	top: 0;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	width: 100%;
+}
+
+.parallax__container {
+	clip: rect(0, auto, auto, 0);
+	height: 100%;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -100;
+}
+
+.bg1 {
+	background-image: url(https://themeforest.unitedthemes.com/wpversions/brooklyn/classic/wp-content/uploads/2018/04/1-hero.jpg);
+}
+
+#bg2 {
+	background-image: url(http://loremflickr.com/320/240/b);
+}
+
+#splash-section-bg {
+	background-image: url(https://themeforest.unitedthemes.com/wpversions/brooklyn/classic/wp-content/uploads/2017/06/parallax-quote.jpg?id=197);
+}
+#get-connected-section-bg {
+	background-image: url(https://themeforest.unitedthemes.com/wpversions/brooklyn/classic/wp-content/uploads/2017/06/get-connected.jpg?id=204);
+}
+
+#team-section-bg {
+	//background-image: url("../assets/images/our-team-bg.jpg");
+	background-color: $solid-background;
+}
+
+#bg5 {
+	background-image: url(https://loremflickr.com/320/240/e);
+}
