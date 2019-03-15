@@ -58,7 +58,7 @@ p strong {
 	margin-bottom: 2px;
 }
 
-p.tag-line
+.tag-line
 {
 	//font-size: 20px;
 	font-size: 1.25rem;
@@ -67,6 +67,11 @@ p.tag-line
 	line-height: 1.5;
 	margin-bottom: 40px;
 	text-transform: uppercase;
+}
+
+.social-network
+{
+	color: $gold;
 }
 
 a {
@@ -111,6 +116,17 @@ a.a--no-weight {
     height: auto;
 }
 
+figure{
+    background: $figure-background;
+    height: 64px;
+    width: 64px;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    float: left;
+	}
+	
 .text-block {
 	text-align: left;
 	margin-bottom: 40px;
@@ -119,4 +135,13 @@ a.a--no-weight {
 .text-gold
 {
 	color: $gold;
+}
+
+.bg-trans {
+    background-color: rgba(0,0,0,.2);
+}
+
+.bg-no-trans {
+	background-color: rgba(0,0,0,1);
+	border-bottom: thin solid $gold;
 }

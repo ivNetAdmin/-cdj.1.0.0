@@ -1,11 +1,29 @@
+.container--get-connected
+{
+    background-color: rgba(0, 0, 0, 0.7);
+}
 
 .content--get-connected
 {
     padding: 50px 20px;
 }
 
+.content--get-connected figure{
+  margin: auto;
+  float: none;
+}
 
-.content--get-connected h1, .content--get-connected .tag-line
+.content--get-connected h1, .content--get-connected 
 {
   color: $alt-font-color;
+}
+
+.content--get-connected .tag-line
+{
+  font-size: smaller;
+}
+
+a.social-icon-link:hover
+{
+  text-decoration: none;
 }

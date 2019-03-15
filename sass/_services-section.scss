@@ -4,6 +4,8 @@
     padding: 50px 20px;
 }
 
+.content--services img:hover {opacity: 0.7;}
+
 .filter-buttons
 {
     text-align: center;
@@ -103,3 +105,36 @@
 //     background: #151515;
 //     border-color: #151515;
 // }
+
+.modal-dialog {
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+
+
+.modal-body {
+position:relative;
+padding:0px;
+min-height:400px;
+background:#ccc;
+border: thin solid $gold;
+}
+
+
+
+
+.close {
+position:absolute;
+right:-30px;
+top:0;
+z-index:999;
+font-size:2rem;
+font-weight: normal;
+color:#fff;
+opacity:1;
+}
+
+#image {
+min-height:200px;
+}

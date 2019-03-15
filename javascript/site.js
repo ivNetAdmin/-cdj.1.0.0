@@ -20,25 +20,54 @@ $(function() {
 
      },1000);
    });
- 
+
+
+   var $imageSrc;  
+$('.gallery img').click(function() {
+    $imageSrc = $(this).data('bigimage');
+});
+
+
+$('#modalImg').on('shown.bs.modal', function (e) {
+    
+  // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
   
+  $("#image").attr('src', $imageSrc  ); 
+  })
+    
+    
+  // reset the modal image
+  $('#modalImg').on('hide.bs.modal', function (e) {
+      // a poor man's stop video
+      $("#image").attr('src',''); 
+  }) 
+
+
  }); 
  
-//  window.onscroll = function (e) {  
-//    if( $(window).scrollTop()> 500)
-//    {
-//      $('.navbar').removeClass('bg-trans');    
-//      $('.navbar').addClass('bg-no-trans');
-//    }else{
-//      $('.navbar').removeClass('bg-no-trans');    
-//      $('.navbar').addClass('bg-trans');
-//    }
+ window.onscroll = function (e) {  
+   if( $(window).scrollTop()> 500)
+   {
+     $('.navbar').removeClass('bg-trans');    
+     $('.navbar').addClass('bg-no-trans');
+   }else{
+     $('.navbar').removeClass('bg-no-trans');    
+     $('.navbar').addClass('bg-trans');
+   }
  
-//    if( $(window).scrollTop()> 680)
-//    {
-//      $('.video-section').hide();
-//    }else{
-//      $('.video-section').show();
-//    }
-//  }
- 
+
+   
+
+  //  $('.gallery_item img').bind('click',function(event){
+  //     //alert(event.target.src);
+  //     $(".modal-body #modalImage")[0].src=event.target.src;
+  //    // $('#addBookDialog').modal('show');
+  //  });
+
+   // if( $(window).scrollTop()> 680)
+   // {
+   //   $('.video-section').hide();
+   // }else{
+   //   $('.video-section').show();
+   // }
+ }
