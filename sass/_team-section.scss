@@ -17,6 +17,11 @@
     border: none;
     background: $card-background;
   }
+
+  .card-text
+  {
+    color: $alt-font-color;
+  }
   
   .image-flip:hover .backside,
   .image-flip.hover .backside {
@@ -97,10 +102,10 @@
   
   .backside .card a {
     font-size: 18px;
-    color: $shadow-color !important;
+    color: $alt-font-color;
   }
   
   .frontside .card .card-title,
   .backside .card .card-title {
-    color: $shadow-color !important;
+    color: $alt-font-color;
   }

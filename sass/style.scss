@@ -8,6 +8,7 @@
 @import "team-section";
 @import "services-section";
 @import "get-connected-section";
+@import "contact-us-section";
 
 *, :after, :before {
 	box-sizing: border-box;
@@ -16,10 +17,6 @@
 .show-on-mobile--inline {
 	display: none;
 }
-
-
-
-
 
 @media screen and (max-width: 480px) {
 	.hide-on-mobile {

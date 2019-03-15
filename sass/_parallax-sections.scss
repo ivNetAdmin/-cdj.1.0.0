@@ -24,13 +24,13 @@
 	z-index: -100;
 }
 
-.bg1 {
-	background-image: url(https://themeforest.unitedthemes.com/wpversions/brooklyn/classic/wp-content/uploads/2018/04/1-hero.jpg);
-}
+// .bg1 {
+// 	background-image: url(https://themeforest.unitedthemes.com/wpversions/brooklyn/classic/wp-content/uploads/2018/04/1-hero.jpg);
+// }
 
-#bg2 {
-	background-image: url(http://loremflickr.com/320/240/b);
-}
+// #bg2 {
+// 	background-image: url(http://loremflickr.com/320/240/b);
+// }
 
 #splash-section-bg {
 	background-image: url(https://themeforest.unitedthemes.com/wpversions/brooklyn/classic/wp-content/uploads/2017/06/parallax-quote.jpg?id=197);
@@ -44,6 +44,6 @@
 	background-color: $solid-background;
 }
 
-#bg5 {
-	background-image: url(https://loremflickr.com/320/240/e);
+#contact-us-section-bg {
+	background-image: url("../assets/images/contact-us-section-bg.jpg");
 }
