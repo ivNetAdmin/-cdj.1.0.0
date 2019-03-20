@@ -5,6 +5,10 @@ $(function() {
    
 $('#email-button').click(function(){
   
+  $( ".txt" ).each(function() {
+    $(this).val('');
+  });
+
     const html = "<div>"+
     "<p>Name: "+$('.txt[name="name"]').val()+"</p>"+
     "<p>Tel: "+$('.txt[name="tel"]').val()+"</p>"+
