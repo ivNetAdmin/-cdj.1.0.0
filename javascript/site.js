@@ -14,7 +14,7 @@ $('#email-button').click(function(){
     "<p>Venue: "+$('.txt[name="venue"]').val()+"</p>"+
     "<p>Guests: "+$('.txt[name="guests"]').val()+"</p>"+
     "<p>Start: "+$('.txt[name="start"]').val()+" End: "+$('.txt[name="end"]').val()+"</p>"+
-    "<p>Guests: "+$('.txt[name="mess"]').val()+"</p>"+
+    "<p>Guests: "+$('.txt_3').text()+"</p>"+
     "</div>"
 
     Email.send({
