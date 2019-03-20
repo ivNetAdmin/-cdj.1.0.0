@@ -4,7 +4,7 @@ $(function() {
    });   
    
 $('#email-button').click(function(){
-   
+  
     const html = "<div>"+
     "<p>Name: "+$('.txt[name="name"]').val()+"</p>"+
     "<p>Tel: "+$('.txt[name="tel"]').val()+"</p>"+
@@ -14,20 +14,20 @@ $('#email-button').click(function(){
     "<p>Venue: "+$('.txt[name="venue"]').val()+"</p>"+
     "<p>Guests: "+$('.txt[name="guests"]').val()+"</p>"+
     "<p>Start: "+$('.txt[name="start"]').val()+" End: "+$('.txt[name="end"]').val()+"</p>"+
-    "<p>Guests: "+$('.txt_3').text()+"</p>"+
+    "<p>Notes: "+$('.txt_3').val()+"</p>"+
     "</div>"
 
-    Email.send({
-        Host : "smtp.ionos.co.uk",
-        Username : "sanj@contagiousdjs.com",
-        Password : "sanjay01",
-        To : 'bp@ivnet.co.uk',
-        From : "sanj@contagiousdjs.com",
-        Subject : "Website Contact",
-        Body : html
-    }).then(
-      message => alert(message)
-    );
+    // Email.send({
+    //     Host : "smtp.ionos.co.uk",
+    //     Username : "sanj@contagiousdjs.com",
+    //     Password : "sanjay01",
+    //     To : 'bp@ivnet.co.uk',
+    //     From : "sanj@contagiousdjs.com",
+    //     Subject : "Website Contact",
+    //     Body : html
+    // }).then(
+    //   message => alert(message)
+    // );
     
 });
 
