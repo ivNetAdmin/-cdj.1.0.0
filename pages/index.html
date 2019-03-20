@@ -21,6 +21,8 @@
     <link href="css/universal-parallax.min.css" rel="stylesheet">
     <link href="css/all.css" rel="stylesheet">
 
+    <link href="css/bootstrap-datepicker3.min.css" rel="stylesheet" />
+
     <!-- <link href="css/fontawesome.min.css" rel="stylesheet"> -->
 
     <!--<link href="css/all.css" rel="stylesheet">
@@ -521,11 +523,27 @@
             <h1 class="divider"><span>CONTACT US</span></h1> 
             <p class="tag-line">Welcome to our <span class="text-gold">Contact Us page</span>.  Fill in some details about your event below and a member of our <span class="text-gold">team</span> will get back to you…</p>   
             <div class="row">
-
+                <div class="col-md-4 form-container">
+                    <div class="form_main">                        
+                        <div class="form">
+                            <form method="dialog" id="contactFrm" name="contactFrm">
+                                <input type="text" required="" placeholder="Name" value="" name="name" class="txt"/>
+                                <input type="tel" required="" placeholder="Contact Number" value="" name="tel" class="txt"/>
+                                <input type="email" required="" placeholder="Email" value="" name="email" class="txt"/>
+                                <input id="eventDate" type="text" placeholder="Event Date" value="" name="date" class="txt"/>                               
+                                <input type="text" placeholder="Event Type" value="" name="type" class="txt"/>
+                                <input type="text" placeholder="Event Venue & Address" value="" name="venue" class="txt"/>
+                                <input type="number" placeholder="Number of Guests" value="" name="guests" class="txt"/>
+                                <label>Estimated Start:</label> <input type="time" value="" name="start" class="txt"/>
+                                <label>Estimated End:</label> <input type="time" value="" name="end" class="txt"/>
+                                <textarea placeholder="Additional Info" name="mess" type="text" class="txt_3" maxlength="200"></textarea>
+                                <button value="Send eMail" id="email-button">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-        
 
         <div class="parallax" id="contact-us-section-bg"></div>
 
@@ -534,7 +552,10 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/all.min.js"></script>
-    <script src="js/universal-parallax.min.js"></script>
+    <script src="js/universal-parallax.min.js"></script>  
+    <script src="js/bootstrap-datepicker-min.js"></script>  
+    <script src="js/smtp-min.js">
+    </script>
     <script src="js/site-min.js"></script>
 
     <!-- <script src="js/jquery.min.js"></script>

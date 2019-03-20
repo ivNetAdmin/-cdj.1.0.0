@@ -8,7 +8,8 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     minify = require('gulp-minify'),
     htmlmin = require('gulp-htmlmin'),
-    browsersync = require('browser-sync').create();
+    browsersync = require('browser-sync').create()
+;
 
 // paths
 var paths = {
@@ -20,7 +21,8 @@ var paths = {
    },
    jscript: {    
       src: "./javascript/*",  
-      dest: "./site/js"
+      dest: "./site/js",
+      lib: "./site/js/lib"
    },
    image: {      
       dest: "./site/assets/images"
@@ -105,7 +107,7 @@ function libraryjs(){
          .src([paths.files.jquery, paths.files.bsstrapjs, paths.files.parallaxjs, paths.files.fajs])
          //.pipe(sourcemaps.init())
          //.pipe(sourcemaps.write())
-         .pipe(gulp.dest(paths.jscript.dest))
+         .pipe(gulp.dest(paths.jscript.dest))         
          //.pipe(browsersync.stream())
    );
 };
@@ -176,6 +178,7 @@ exports.clean = clean;
 
 exports.librarycss = librarycss;
 exports.libraryjs = libraryjs;
+
 exports.webfonts = webfonts;
 
 exports.libraries = libraries;

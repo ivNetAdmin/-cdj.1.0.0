@@ -3,6 +3,42 @@ $(function() {
        speed: 8.0
    });   
    
+$('#email-button').click(function(){
+   
+    const html = "<div>"+
+    "<p>Name: "+$('.txt[name="name"]').val()+"</p>"+
+    "<p>Tel: "+$('.txt[name="tel"]').val()+"</p>"+
+    "<p>Email: "+$('.txt[name="email"]').val()+"</p>"+
+    "<p>Event Date: "+$('.txt[name="date"]').val()+"</p>"+
+    "<p>Event Type: "+$('.txt[name="type"]').val()+"</p>"+
+    "<p>Venue: "+$('.txt[name="venue"]').val()+"</p>"+
+    "<p>Guests: "+$('.txt[name="guests"]').val()+"</p>"+
+    "<p>Start: "+$('.txt[name="start"]').val()+" End: "+$('.txt[name="end"]').val()+"</p>"+
+    "<p>Guests: "+$('.txt[name="mess"]').val()+"</p>"+
+    "</div>"
+
+    Email.send({
+        Host : "smtp.ionos.co.uk",
+        Username : "sanj@contagiousdjs.com",
+        Password : "sanjay01",
+        To : 'bp@ivnet.co.uk',
+        From : "sanj@contagiousdjs.com",
+        Subject : "Website Contact",
+        Body : html
+    }).then(
+      message => alert(message)
+    );
+    
+});
+
+$("#eventDate").datepicker({
+    autoclose: true,
+    todayHighlight: true,
+    orientation: "top auto"
+}).on("change", function () {
+
+});
+
 //    new FgSlider('slider-1', {
 //      autoplay: true, // autoplay on / off
 //      effect: 'slide', // fade, scale, slide, slide-top
