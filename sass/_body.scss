@@ -1,7 +1,7 @@
 
 body, html {
 	height: 100%;
-	width: 100%;
+	width: 100%!important;
 }
 
 body {
@@ -114,6 +114,9 @@ a.a--no-weight {
 	text-align: center;
 }
 
+.container--team{
+	background-color: #000;
+}
 .img-responsive
 {
     display: block;
