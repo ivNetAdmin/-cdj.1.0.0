@@ -54,7 +54,7 @@ $("#eventDate").datepicker({
    $('#hero-vid').on('loadeddata',function(e)
    {
      setTimeout(function(){
-       $('.loader').fadeOut('slow');
+       //$('.loader').fadeOut('slow');
 
        $('.splash').removeClass('hide');
     $('.btn-holder').removeClass('hide');

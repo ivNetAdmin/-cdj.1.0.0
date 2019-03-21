@@ -1,13 +1,13 @@
-@import "video";
+@import "carousel";
 
 #home-slider
 {
-  display: none;
+  display: inherit;
 }
 
 #home-video
 {
-  display: inherit;
+  display: none;
 }
 
 .video-strapline 

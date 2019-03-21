@@ -11,16 +11,17 @@
    display: inherit;  
  }
 
- #home-slider .fg-content
- {
-  width: 100%;
- }
-
  #home-video
  {
    display: none;
  }
  
+
+ #home-slider .fg-content
+ {
+  width: 100%;
+ }
+
  .carousel-strapline 
 {
   font-size: 2.6rem;
@@ -78,11 +79,11 @@
 }
 
 h1{
-  font-size: 2rem!important;
+  font-size: 1.6rem!important;
 }
 
 h3{
-  font-size: 1.2rem!important;
+  font-size: 1.1rem!important;
 }
 
 .tag-line{
@@ -116,10 +117,25 @@ figure img{
 
 .modal-dialog {
    max-width: 300px; 
-  margin: 30px auto;
+  //margin: 30px auto;
 }
 
 .modal-body
 {
   min-height: inherit;
+}
+
+.frontside
+{
+margin-bottom: 5px;
+}
+
+.content--get-connected
+{
+  padding: 25px 10px;
+}
+
+.content--contact
+{
+padding: 25px 10px;
 }
