@@ -2,7 +2,6 @@
 @import "body";
 @import "parallax-sections";
 @import "divider";
-@import "video";
 @import "about-us-section";
 @import "splash-section";
 @import "team-section";
@@ -15,12 +14,12 @@
 	box-sizing: border-box;
 }
 
-.show-on-mobile--inline {
-	display: none;
-}
+// .show-on-mobile--inline {
+// 	display: none;
+// }
 
-@media screen and (max-width: 480px) {
-	.hide-on-mobile {
-		display: none;
-	}
-}
+// @media screen and (max-width: 480px) {
+// 	.hide-on-mobile {
+// 		display: none;
+// 	}
+// }

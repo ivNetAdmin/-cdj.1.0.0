@@ -1,20 +1,19 @@
-// @import "video";
+@import "video";
 
-// .hide-on-desktop
-// {
-//    display:none;
-// }
+#home-slider
+{
+  display: none;
+}
 
-// .btn-holder {
-//    top: 63%;
-//    width: 100%;
-//    //border: thin solid yellow;
-//  }
+#home-video
+{
+  display: inherit;
+}
 
-//  .splash
-//  {
-//    font-size: 780%;
-//  }
+.video-strapline 
+{
+ font-size: 3.0rem;
+}
 
 body {
   color: yellow;

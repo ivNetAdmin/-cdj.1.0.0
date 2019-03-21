@@ -1,26 +1,11 @@
-// @import "video";
+ @import "video";
 
-// .hide-on-desktop
-// {
-//    display:none;
-// }
+#home-slider
+{
+  display: none;
+}
 
-// .btn-holder {
-//    top: 50%;
-//    width: 100%;
-//    //border: thin solid green;
-//  }
-
-//  .splash
-//  {
-//    font-size: 850%;
-//  }
-
-//  .break
-//  {
-//     display:none;
-//  }
-
-// body {
-//     color: red;
-// }
+#home-video
+{
+  display: inherit;
+}

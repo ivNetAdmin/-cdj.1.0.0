@@ -171,6 +171,7 @@ function watchfiles(){
 // complex tasks
 const libraries = gulp.parallel(librarycss, libraryjs, webfonts);
 const build = gulp.series(clean, gulp.parallel(libraries, style, javascript, image, video, html));
+const quick_build = gulp.parallel(libraries, style, javascript, html);
 const watch = gulp.parallel(browserSync, watchfiles);
 
 // export
@@ -189,6 +190,7 @@ exports.image = image;
 exports.video = video;
 exports.html = html;
 
+exports.quick_build = quick_build;
 exports.build = build;
 exports.watch = watch;
 
