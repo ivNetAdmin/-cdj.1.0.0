@@ -1,4 +1,15 @@
-.parallax__container .parallax {
+.parallax__container {
+	clip: rect(0, auto, auto, 0);
+	height: 100%;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -100;
+}
+
+.parallax {
 	/* can be put in a seperate class for better control */
 	background-position: center;
 	background-repeat: no-repeat;
@@ -11,17 +22,6 @@
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 	width: 100%;
-}
-
-.parallax__container {
-	clip: rect(0, auto, auto, 0);
-	height: 100%;
-	left: 0;
-	overflow: hidden;
-	position: absolute;
-	top: 0;
-	width: 100%;
-	z-index: -100;
 }
 
 // .bg1 {
