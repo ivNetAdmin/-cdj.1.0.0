@@ -21,17 +21,15 @@ $(function() {
           "<p>Notes: " + $('.txt_3').val() + "</p>" +
           "</div>"
 
-      // Email.send({
-      //     Host : "smtp.ionos.co.uk",
-      //     Username : "sanj@contagiousdjs.com",
-      //     Password : "sanjay01",
-      //     To : 'bp@ivnet.co.uk',
-      //     From : "sanj@contagiousdjs.com",
-      //     Subject : "Website Contact",
-      //     Body : html
-      // }).then(
-      //   message => alert(message)
-      // );
+      Email.send({      
+          SecureToken : "080eef13-07c8-4f65-92dc-083189461630",
+          To : 'bp@ivnet.co.uk',
+          From : "website@contagiousdjs.com",
+          Subject : "Website Contact",
+          Body : html
+      }).then(
+        message => alert(message)
+      );
 
       $(".txt").each(function() {
           $(this).val('');
