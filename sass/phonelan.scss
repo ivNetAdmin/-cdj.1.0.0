@@ -20,6 +20,7 @@
  #home-slider .fg-content
  {
   width: 100%;
+  top: 25%!important;
  }
 
  .carousel-strapline 
@@ -116,8 +117,8 @@ figure img{
 }
 
 .modal-dialog {
-   max-width: 300px; 
-  //margin: 30px auto;
+  max-width: 500px!important; 
+   margin: 10% auto!important;
 }
 
 .modal-body
