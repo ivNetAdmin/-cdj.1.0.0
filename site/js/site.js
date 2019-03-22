@@ -106,7 +106,7 @@ $(window).scroll(function () {
 
 function addEmailMessage(msg)
 {
-  $('#emailok').val('The message was set: ' + msg);
+  $('#emailok').val('The message was set, ' + msg);
 }
 
 new universalParallax().init({
