@@ -97,8 +97,21 @@
 	// width: 100%;
 	//display: flex;
   //justify-content: center;
-  z-index: 1000;
+ // position:relative;
+ //   overflow:auto;
+  //z-index: 1000;
 	margin-top: 15px;
+ }
+
+ .btn-holder a{
+   cursor: pointer;
+   position:relative;
+   overflow:auto;
+   z-index: 5;   
+ }
+
+ .btn-holder a:hover{
+  text-decoration: none
  }
  
  .btn-box {

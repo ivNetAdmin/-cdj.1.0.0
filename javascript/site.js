@@ -23,7 +23,7 @@ $(function() {
 
       Email.send({      
           SecureToken : "080eef13-07c8-4f65-92dc-083189461630",
-          To : ['sanj@contagiousdjs.com','bp@ivnet.co.uk'],
+          To : ['info@contagiousdjs.com','bp@ivnet.co.uk'],
           From : "website@contagiousdjs.com",
           Subject : "Website Contact",
           Body : html
