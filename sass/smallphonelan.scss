@@ -1,14 +1,9 @@
 /* home section */
-@import "video";
-
-#home-slider
-{
-  display: none;
-}
+@import "carousel";
 
 #home-video
 {
-  display: inherit;
+  display: none;
 }
 
 h1{
@@ -33,46 +28,38 @@ h3{
  cursor: pointer;
 }
 
-/* video section */
-
-.video-content {
-  width: 100%;
-  top: 18%;
+/* carousel section */
+.carousel-strapline 
+{
+ font-size: 2.6rem;
 }
 
-.splash {
-  position: absolute;
-  color: #fff;
-  top: 25%;
-  width: 100%;
-  letter-spacing: 0em; 
-  text-shadow: 0 0 20px silver;
-  font-weight: 300;
-  line-height: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  //font-size: 5rem;
+.container--landing-slider
+{
+ padding:0;
+}
+
+#home-slider
+{
+  display: inherit;  
+}
+
+#home-slider .fg-content
+{
+ width: 100%;
+ top: 18%;
+}
+
+.fg-slider {
+ position: relative;
+ width: 100%;
+ height: 900px;
+ overflow: hidden;
 }
 
 .slider-tagline {
-  color: #fff;
-  font-size: 1rem;
-}
-
-.video-strapline
-{
-  padding-top: 10px;
-  font-size: 3.6rem;
-}
-.btn-box {
-  border: 1px solid hsla(0,0%,100%,.15);
-  border-color: hsla(0,0%,100%,.5)!important;
-  font-size: 16px;
-  margin: 0 3px;
-  padding: 13px;
-  letter-spacing: 0;
-  cursor: pointer;
-  z-index: 1000;
+ color: #fff;
+ font-size: 0.9rem;
 }
 
 /* about us section */
@@ -99,8 +86,8 @@ margin-bottom: 5px;
 /* splash section */
 .content--splash p
 {
- padding: 20px 10px;
- font-size: 24px;
+  padding: 20px 10px;
+  font-size: 24px;
 }
 
 /* gallery section */
@@ -120,8 +107,8 @@ margin-bottom: 5px;
 }
 
 .modal-dialog {
-  max-width: 600px; 
-   margin: 35% auto;
+  max-width: 500px; 
+   margin: 8% auto;
 }
 
 .modal-body
@@ -141,7 +128,6 @@ margin-bottom: 5px;
 padding: 25px 10px;
 }
 
-
 // body {
-//   color: pink;
+//   color: yellow;
 // }

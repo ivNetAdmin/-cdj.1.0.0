@@ -1,6 +1,6 @@
  @import "video";
 
-#home-slider
+ #home-slider
 {
   display: none;
 }
@@ -10,7 +10,11 @@
   display: inherit;
 }
 
+.video-strapline 
+{
+  font-size: 4rem;
+}
 
 // body {
-//   color: purple;
+//   color: orange;
 // }
