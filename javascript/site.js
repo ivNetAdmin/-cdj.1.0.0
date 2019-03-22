@@ -28,7 +28,7 @@ $(function() {
           Subject : "Website Contact",
           Body : html
       }).then(
-        message => alert(message)
+       $('#emailok').val(message)
       );
 
       $(".txt").each(function() {
