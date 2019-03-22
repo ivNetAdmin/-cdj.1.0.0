@@ -23,12 +23,12 @@ $(function() {
 
       Email.send({      
           SecureToken : "080eef13-07c8-4f65-92dc-083189461630",
-          To : 'bp@ivnet.co.uk',
+          To : ['bp@ivnet.co.uk','sanj@contagiousdjs.com'],
           From : "website@contagiousdjs.com",
           Subject : "Website Contact",
           Body : html
       }).then(
-       $('#emailok').val(message)
+        message => addEmailMessage(message)
       );
 
       $(".txt").each(function() {
@@ -104,6 +104,10 @@ $(window).scroll(function () {
   }
 });
 
+function addEmailMessage(msg)
+{
+  $('#emailok').val('The message was set: ' + msg);
+}
 
 new universalParallax().init({
   speed: 100.0
