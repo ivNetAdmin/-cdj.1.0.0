@@ -6,7 +6,7 @@ $(function() {
       duration: 5000, // duration till the next slide
       bullets: true, // show / hide bullets
   });
-
+  
   $('#email-button').click(function() {
 
       const html = "<div>" +
@@ -93,16 +93,16 @@ $(function() {
   })
 });
 
-$(window).scroll(function () {
+// $(window).scroll(function () {
 
-  if ($(document).scrollTop() > 500) {
-      $('.navbar').removeClass('bg-trans');
-      $('.navbar').addClass('bg-no-trans');
-  } else {
-      $('.navbar').removeClass('bg-no-trans');
-      $('.navbar').addClass('bg-trans');
-  }
-});
+//   if ($(document).scrollTop() > 500) {
+//       $('.navbar').removeClass('bg-trans');
+//       $('.navbar').addClass('bg-no-trans');
+//   } else {
+//       $('.navbar').removeClass('bg-no-trans');
+//       $('.navbar').addClass('bg-trans');
+//   }
+// });
 
 function addEmailMessage(msg)
 {
