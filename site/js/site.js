@@ -7,6 +7,9 @@ $(function() {
       bullets: true, // show / hide bullets
   });
   
+  validate();
+  $('#contactFrm input').on('keyup', validate);
+
   $('#email-button').click(function() {
 
       const html = "<div>" +
@@ -106,10 +109,40 @@ $(function() {
 
 function addEmailMessage(msg)
 {
-  $('#emailok').text('The message was set, ' + msg);
+  $('#emailok').text('Thank you for the enquiry, the team will get back to you shortly');
 }
 
 new universalParallax().init({
   speed: 100.0
 });
+
+function validate() {
+  
+    var inputsWithValues = 0;
+    var inputsReqValues = 0;
+    
+    // get all input fields except for type='submit'
+    var myInputs = $("#contactFrm input:not([type='submit'])");       
+
+    myInputs.each(function(e) {
+    // if it has a value, increment the counter
+    //alert($(this).attr('name'));
+        if($(this).attr('required'))
+        {
+            inputsReqValues += 1;
+            if ($(this).val()) {         
+                inputsWithValues += 1;
+            }
+        }
+    });
+
+    if (inputsWithValues == inputsReqValues) {
+        $("#email-button").removeClass('email-button-disabled');
+        $("#email-button").prop('disabled', false);       
+    } else {
+        $("#email-button").prop('disabled', true);
+        $("#email-button").addClass('email-button-disabled');
+    }
+  }
+ // document.addEventListener('contextmenu', event => event.preventDefault());
 
